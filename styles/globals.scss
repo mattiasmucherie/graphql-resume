@@ -1,5 +1,7 @@
 @import "styles/colors.scss";
+@import "styles/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 html,
 body {
   padding: 0;
@@ -17,4 +19,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 28px;
+  @include desktop() {
+    font-size: 50px;
+  }
+}
+
+h3 {
+  margin: 0;
+  line-height: 50%;
 }

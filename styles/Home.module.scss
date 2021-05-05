@@ -24,8 +24,6 @@
   grid-template-columns: 1fr;
   grid-gap: 3rem;
   margin-top: 0;
-  margin-bottom: 0.8rem;
-
   @include desktop() {
     grid-template-columns: 1fr auto;
     padding: 100px 0 160px;
@@ -39,15 +37,13 @@
   }
 }
 .title {
-  font-size: 28px;
   font-weight: 700;
   color: $accent-color-primary;
-  background: rgba(0, 0, 0, 0) linear-gradient(#5bd7a3, $accent-color-primary)
+  background: rgba(0, 0, 0, 0) linear-gradient(#45b386, $accent-color-primary)
     repeat scroll 0 0 text padding-box;
   -webkit-text-fill-color: transparent;
   margin: 0;
   @include desktop() {
-    font-size: 50px;
     grid-column: 1;
     grid-row: 1;
   }

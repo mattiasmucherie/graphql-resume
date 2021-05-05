@@ -14,7 +14,7 @@
   align-items: center;
   backdrop-filter: blur(5px);
   @include mobile() {
-    height: calc(#{$navbar-height}/1.25)
+    height: calc(#{$navbar-height}/ 1.25);
   }
 }
 
@@ -35,14 +35,11 @@
 .navbar {
   display: flex;
   transition: all 0.3s ease;
-  .navItem {
-    margin-left: 10px;
-  }
   @include mobile() {
     display: none;
     position: fixed;
     right: 0;
-    top: calc(#{$navbar-height}/1.25);
+    top: calc(#{$navbar-height}/ 1.25);
     flex-direction: column;
     background-color: $bg-secondary;
     width: 100%;
@@ -51,8 +48,8 @@
       justify-content: left;
       border-top: 1px solid $bg-primary;
       margin: 0;
-      height: calc(#{$navbar-height}/1.25);
-      padding-left:6vw;
+      height: calc(#{$navbar-height}/ 1.25);
+      padding: 0 6vw;
     }
   }
 }
@@ -65,6 +62,23 @@
   height: $navbar-height;
   display: flex;
   align-items: center;
+  @include mobile() {
+    height: calc(#{$navbar-height}/ 1.25);
+  }
+  .link {
+    transition: all 0.3s ease;
+    padding: 10px;
+    @include mobile() {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+    }
+    &:hover {
+      color: $accent-color-primary;
+    }
+  }
 }
 .hamburger {
   background: none;
@@ -80,4 +94,7 @@
   height: 30px;
   width: 30px;
   color: inherit;
+  &:hover {
+    color: $accent-color-primary;
+  }
 }

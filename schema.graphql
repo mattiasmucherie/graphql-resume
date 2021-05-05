@@ -27,12 +27,26 @@ type Position {
   years: Int
 }
 
+type Project {
+  demo: URL
+  description: String
+  img: String
+  sourceCode: URL
+  title: String
+}
+
 type Query {
+  """Get the bio"""
   bio: Bio
 
   """Find a position by its ID"""
   position(id: ID): Position
+
+  """Get all the positions"""
   positions: [Position]
+
+  """Get all the projects"""
+  projects: [Project]
 }
 
 """

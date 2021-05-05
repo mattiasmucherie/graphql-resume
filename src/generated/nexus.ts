@@ -54,6 +54,7 @@ export interface NexusGenScalars {
 export interface NexusGenObjects {
   Bio: faces.BioInterface;
   Position: faces.PositionInterface;
+  Project: faces.ProjectInterface;
   Query: {};
 }
 
@@ -86,10 +87,18 @@ export interface NexusGenFieldTypes {
     title: string | null; // String
     years: number | null; // Int
   }
+  Project: { // field return type
+    demo: NexusGenScalars['URL'] | null; // URL
+    description: string | null; // String
+    img: string | null; // String
+    sourceCode: NexusGenScalars['URL'] | null; // URL
+    title: string | null; // String
+  }
   Query: { // field return type
     bio: NexusGenRootTypes['Bio'] | null; // Bio
     position: NexusGenRootTypes['Position'] | null; // Position
     positions: Array<NexusGenRootTypes['Position'] | null> | null; // [Position]
+    projects: Array<NexusGenRootTypes['Project'] | null> | null; // [Project]
   }
 }
 
@@ -112,10 +121,18 @@ export interface NexusGenFieldTypeNames {
     title: 'String'
     years: 'Int'
   }
+  Project: { // field return type name
+    demo: 'URL'
+    description: 'String'
+    img: 'String'
+    sourceCode: 'URL'
+    title: 'String'
+  }
   Query: { // field return type name
     bio: 'Bio'
     position: 'Position'
     positions: 'Position'
+    projects: 'Project'
   }
 }
 

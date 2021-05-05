@@ -14,3 +14,10 @@ export interface PositionInterface {
   endDate?: string
   achievments: string[]
 }
+export interface ProjectInterface {
+  title: string
+  description: string
+  img: string
+  demo: string
+  sourceCode: string
+}
