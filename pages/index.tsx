@@ -83,8 +83,8 @@ export default function Home() {
               <Image
                 src="/portrait.jpg"
                 alt="Picture of Mattias"
-                width={200}
-                height={200}
+                width={168}
+                height={168}
                 layout="intrinsic"
                 className={styles.image}
               />
