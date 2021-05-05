@@ -12,22 +12,22 @@ export const Position = objectType({
     t.field("endDate", {
       type: nullable("Date"),
       resolve: (position) =>
-        position.endDate ? new Date(position.endDate) : null,
+        position.endDate ? new Date(position.endDate) : null
     })
     t.int("years", {
       resolve: ({ endDate, startDate }) =>
         differenceInYears(
           endDate ? new Date(endDate) : new Date(),
           new Date(startDate)
-        ),
+        )
     })
     t.int("months", {
       resolve: ({ endDate, startDate }) =>
         differenceInMonths(
           endDate ? new Date(endDate) : new Date(),
           new Date(startDate)
-        ) % 12,
+        ) % 12
     })
     t.list.string("achievements", { resolve: (pos) => pos.achievments })
-  },
+  }
 })

@@ -6,18 +6,18 @@ export const Query = queryType({
   definition(t) {
     t.field("bio", {
       type: Bio,
-      resolve: () => data.bio,
+      resolve: () => data.bio
     })
     t.list.field("positions", {
       type: Position,
-      resolve: () => data.positions,
+      resolve: () => data.positions
     })
     t.field("position", {
       type: Position,
       description: "Find a position by its ID",
       args: { id: idArg() },
       resolve: (root, { id }: { id: string }, ctx) =>
-        data.positions.find((pos) => pos.id === id),
+        data.positions.find((pos) => pos.id === id)
     })
-  },
+  }
 })

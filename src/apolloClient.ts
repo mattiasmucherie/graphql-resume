@@ -2,7 +2,7 @@ import {
   ApolloClient,
   HttpLink,
   InMemoryCache,
-  NormalizedCacheObject,
+  NormalizedCacheObject
 } from "@apollo/client"
 
 let apolloClient: ApolloClient<NormalizedCacheObject>
@@ -10,9 +10,9 @@ let apolloClient: ApolloClient<NormalizedCacheObject>
 const createApolloClient = () => {
   return new ApolloClient({
     link: new HttpLink({
-      uri: "/api/graphql",
+      uri: "/api/graphql"
     }),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache()
   })
 }
 const initializeApollo = () => {

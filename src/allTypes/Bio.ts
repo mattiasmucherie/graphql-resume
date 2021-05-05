@@ -8,5 +8,5 @@ export const Bio = objectType({
     t.string("email")
     t.url("website", { resolve: (bio) => new URL(bio.website) })
     t.url("linkedin", { resolve: (bio) => new URL(bio.linkedin) })
-  },
+  }
 })

@@ -1,0 +1,35 @@
+@import "styles/colors";
+@import "styles/variables";
+
+.headerBackground {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+  height: $navbar-height;
+  background-color: rgba(7, 8, 8, 0.78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerWidth {
+  width: 100%;
+  max-width: $max-site-width;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+}
+.navbar {
+  display: flex;
+}
+.navItem {
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}

@@ -1,0 +1,4 @@
+/node_modules
+/.next
+/schema.graphql
+/src/generated

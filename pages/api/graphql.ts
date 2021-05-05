@@ -6,7 +6,7 @@ const handler = server.createHandler({ path: "/api/graphql" })
 
 export const config = {
   api: {
-    bodyParser: false,
-  },
+    bodyParser: false
+  }
 }
 export default handler
